@@ -8,10 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/script.js" defer></script>
 </head>
 <body>
@@ -385,7 +389,7 @@
                 </div>
             </div>
             <nav class="nav-t">
-                <div class="Tbg"></div>
+                <!-- <div class="Tbg"></div> -->
                 <div class="Tdepth1">
                     <div class="Td-1">
                         <ul class="td-lang">
@@ -1077,7 +1081,61 @@
                 </ul>
             </nav>
         </header>
-        <section id="section"></section>
+        <section id="section">
+            <div class="main-slide">            
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="javascript:;">
+                                <img class="main-slide-w" src="./img/main_slide1.jpg" alt="함스부르크 600년, 매혹의 걸작들">
+                                <img class="main-slide-s" src="./img/main_slide_small_1.jpg" alt="함스부르크 600년, 매혹의 걸작들">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:;">
+                                <img class="main-slide-w" src="./img/main_slide2.jpg" alt="토끼를 찾아라">
+                                <img class="main-slide-s" src="./img/main_slide_small_2.jpg" alt="토끼를 찾아라">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:;">
+                                <img class="main-slide-w" src="./img/main_slide3.png" alt="외규장각 의궤 그 고귀함의 의미">
+                                <img class="main-slide-s" src="./img/main_slide_small_3.jpg" alt="외규장각 의궤 그 고귀함의 의미">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:;">
+                                <img class="main-slide-w" src="./img/main_slide5.jpg" alt="나눔의 가치를 발견하는 공간">
+                                <img class="main-slide-s" src="./img/main_slide_small_5.jpg" alt="나눔의 가치를 발견하는 공간">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:;">
+                                <img class="main-slide-w" src="./img/main_slide6.jpg" alt="메소포타미아 저 기록의 땅">
+                                <img class="main-slide-s" src="./img/main_slide_small_6.jpg" alt="메소포타미아 저 기록의 땅">
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="javascript:;">
+                                <img class="main-slide-w" src="./img/main_slide7.jpg" alt="사유의 방">
+                                <img class="main-slide-s" src="./img/main_slide_small_7.jpg" alt="사유의 방">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <section class="section1">
+                <div class="container">
+                    <div class="s1-left"></div>
+                    <div class="s1-right"></div>
+                </div>
+            </section>
+            <section class="section2"></section>
+            <section class="section3"></section>
+        </section>
         <footer id="footer"></footer>
     </div>
 </body>

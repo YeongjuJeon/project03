@@ -1,4 +1,17 @@
 $(function(){
+    var swiper = new Swiper(".mySwiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        keyboard: true,
+        loop: true,
+        
+    });
+
     $(window).resize(function(){ 
         if (window.innerWidth < 600){
             // 헤더 햄버거 메뉴
@@ -11,15 +24,34 @@ $(function(){
                     $('.nav-t').hide();
                 }else{
                     $('.nav-p').hide();  
+                    $('.nav-t').hide();
+
                 }
             })
             // 메뉴2depth 슬라이드다운
+            let a=true
             $('.P-depth1>li').click(function(e){
                 e.preventDefault();
-                if($(this).children('ul').css('display','none')){
-                    $(this).children('ul').slideDown();
+                const submenu = $(this).children('.P-depth2');
+                if( a==true ){
+                    submenu.stop().slideUp();
+                    a=false;
                 }else{
-                    $(this).children('ul').slideUp();
+                    submenu.stop().slideDown();
+                    a=true;
+                }
+            })
+            // 메뉴3depth 슬라이드다운
+            let b=true;
+            $('.P-depth2>li').click(function(e){
+                e.preventDefault();
+                const submenu1 = $(this).children('.P-depth3');
+                if( b==true){
+                    submenu1.stop().slideUp();
+                    b=false
+                }else{
+                    submenu1.stop().slideDown();
+                    b=true
                 }
             })
 
