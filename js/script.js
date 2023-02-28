@@ -1,5 +1,6 @@
 $(function(){
-    var swiper = new Swiper(".mySwiper", {
+    // section1 swiper
+    var swiper = new Swiper(".main-slide .mySwiper", {
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -9,7 +10,69 @@ $(function(){
         },
         keyboard: true,
         loop: true,
-        
+        autoplay: true,
+    });
+    // section2 swiper
+    var swiper2 = new Swiper(".mySwiper1", {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        // Responsive breakpoints
+        breakpoints: {
+            // when window width is >= 600px
+            600: {
+            slidesPerView: 2,
+            spaceBetween: 40
+            },
+            // when window width is >= 1000px
+            1000: {
+            slidesPerView: 3,
+            spaceBetween: 50
+            },
+            // when window width is >= 1440px
+            1440: {
+            slidesPerView: 4,
+            spaceBetween: 60
+            }
+        },
+    });
+    // 서브슬라이드 컨트롤러
+    const controller = $('.swiper-controller');
+    // const subslide = $('.sub-slide .mySwiper');
+    controller.click(function(){
+        if(controller.hasClass('pause')){
+            controller.removeClass('pause');
+            swiper2.autoplay.pause();
+        }else{
+            controller.addClass('pause');
+            swiper2.autoplay.resume();
+        }
+    })
+    // SECTION3 TAB
+    $(function(){
+        $('.s3-tab-content > div').hide();
+        $('.s3-tab-nav a').click(function () {
+          $('.s3-tab-content > div').hide().filter(this.hash).fadeIn();
+          $('.s3-tab-nav a').removeClass('active');
+          $(this).addClass('active');
+          return false;
+        }).filter(':eq(0)').click();
+    });
+    // SECTION3 mini swiper
+    const swiper3 = new Swiper('.s3-right .swiper', {
+        // Optional parameters
+        loop: true,
+        autoplay: true,
+
+        // If we need pagination
+        pagination: {
+          el: '.swiper-pagination',
+        },
     });
 
     $(window).resize(function(){ 
