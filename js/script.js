@@ -1,4 +1,10 @@
 $(function(){
+    // 소속 박물관 바로가기
+    $('.museum-baro').click(function(){
+        $(this).toggleClass('on');
+        $('.museum-baro a').next('ul').slideToggle(300);
+    })
+
     // section1 swiper
     var swiper = new Swiper(".main-slide .mySwiper", {
         navigation: {
@@ -11,6 +17,8 @@ $(function(){
         keyboard: true,
         loop: true,
         autoplay: true,
+        clickable: true,
+
     });
     // section2 swiper
     var swiper2 = new Swiper(".mySwiper1", {
@@ -18,6 +26,7 @@ $(function(){
         spaceBetween: 20,
         loop: true,
         autoplay: true,
+        clickable: true,
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -74,6 +83,47 @@ $(function(){
           el: '.swiper-pagination',
         },
     });
+
+    // SECTION4 swiper1
+    const swiper4 = new Swiper('.s4-mid .swiper', {
+        loop: true,
+        autoplay: true,
+        clickable: true,
+      
+        pagination: {
+          el: '.s4-top .swiper-pagination',
+          type: "fraction",
+        },
+      
+        navigation: {
+          nextEl: '.s4-top .swiper-button-next',
+          prevEl: '.s4-top .swiper-button-prev',
+        },
+      });
+
+    // SECTION4 swiper2
+    const swiper5 = new Swiper('.s4-right .swiper', {
+        loop: true,
+        autoplay: true,
+        clickable: true,
+      
+        pagination: {
+          el: '.s4-top2 .swiper-pagination',
+          type: "fraction",
+        },
+      
+        navigation: {
+          nextEl: '.s4-top2 .swiper-button-next',
+          prevEl: '.s4-top2 .swiper-button-prev',
+        },
+      });
+    
+    // FOOTER fb-box2
+    $('.fb-box2>ul>li>a').click(function(){
+        $(this).parent($('li')).toggleClass('on');
+        $(this).next($('ul')).slideToggle(300);
+    })
+
 
     $(window).resize(function(){ 
         if (window.innerWidth < 600){
@@ -148,14 +198,6 @@ $(function(){
                 $(this).find('ul').stop().slideUp();
             })
             
-              // 소속 박물관 바로가기
-            $('.museum-baro').on('click',function(){
-                $('.museum-baro').addClass('on');
-                $('.museum-baro-show').slideDown();
-            }, function(){
-                $('.museum-baro').removeClass('on');
-                $('.museum-baro-show').slideUp();
-            });
         }
     
     }).resize();
