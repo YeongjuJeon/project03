@@ -4,6 +4,11 @@ $(function(){
         $(this).toggleClass('on');
         $('.museum-baro a').next('ul').slideToggle(300);
     })
+    // 언어 바로가기
+    $('.language-baro').click(function(){
+        $(this).toggleClass('on');
+        $('.language-baro a').next('ul').slideToggle(300);
+    })
 
     // section1 swiper
     var swiper = new Swiper(".main-slide .mySwiper", {

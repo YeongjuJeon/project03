@@ -14,7 +14,7 @@ body{
     width: 1440px;
     height: inherit;
     margin: 0 auto;
-    background-color: rgba(0, 0,0,0.1);
+    /* background-color: rgba(0, 0,0,0.1); */
 }
 
 #header{
@@ -63,7 +63,7 @@ body{
     height: 8px;
     display: inline-block; 
 }
-.museum-baro.on a{
+.museum-baro.on>a{
     background-color: #000;
     color: #fff;
 }
@@ -102,7 +102,9 @@ body{
     text-decoration: underline;
     color: #ffcc33;
 }
-
+.language-baro{
+    position: relative;
+}
 .language-baro i{
     background-size: 15px 8px;
     background-image: url('../img/ico_sm_black_open.png');
@@ -111,12 +113,40 @@ body{
     height: 8px;
     display: inline-block; 
 }
-.language-baro.on{
+.language-baro.on>a{
     background-color: #000;
     color: #fff;
 }
 .language-baro.on i{
     background-image: url('../img/ico_sm_white_close.png');
+}
+.language-baro-show{
+    padding: 20px 0;
+    background-color: #000;
+    position: absolute;
+    top: 48px;
+    z-index: 10;
+    width: 100%;
+    display: none;
+}
+.language-baro-show li{
+    text-align: center;
+    clear: both;
+    margin: 0;
+    width: 100%;
+}
+.language-baro-show li a{
+    font-size: 14px;
+    color: #ccc;
+    display: block;
+    background-color: #000;
+    width: 100%;
+    padding: 5px 0;
+    transition: all 0.3s;
+}
+.language-baro-show li a:hover{
+    text-decoration: underline;
+    color:#ffcc33;
 }
 
 .header-nav{
